@@ -7,6 +7,24 @@
 body {
 	width: 100vw;
 	height: 100vh;
+	/* background-color: #646464; */
+}
+
+.app-theme {
+	width: 150px;
+	padding: 5px;
+	font-size: smaller;
+	font-family: 'Courier New';
+}
+
+body.dark-theme {
+	background-color: #ffffff;
+	color: #000000c4;
+}
+
+body.light-theme {
+	background-color: #000000c4;
+	color: #ffffff;
 }
 
 .app {
@@ -20,18 +38,12 @@ body {
 	font-family: 'Courier New';
 }
 
-.app-subtitle {
-	text-align: center;
-	font-family: 'Courier New';
-	padding: 5px;
-	text-emphasis: none;
-}
-
 .app-body {
-	margin-top: 10px;
+	margin-top: 15px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	font-family: 'Courier New';
 }
 
 .battlefield {
@@ -41,14 +53,18 @@ body {
 .battlefield-table {
 	border-collapse: collapse;
 	border-spacing: 0;
-	background: rgba(40, 46, 250, 0.05);
+	background: #b6ebfa;
 }
 
 .battlefield-item {
 	position: relative;
 	width: 32px;
 	height: 32px;
-	border: 1px solid rgba(6, 25, 247, 0.15);
+	border: 1px solid #6e8ebd;
+}
+
+.battlefield-item__active {
+	background: #69c3ff;
 }
 
 .marker {
@@ -80,57 +96,43 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
-	margin: -3px;
-	border: 3px solid #0400ff;
-	background: rgb(0, 55, 255);
+	margin: -2px;
+	border: 2px solid #000;
+	background: #ffffff;
 	width: 32px;
 	height: 32px;
 }
 
 .ship-row-1 {
-	background-color: aqua;
-	border-color: #0400ff
+	width: 32px;
 }
 
 .ship-row-2 {
 	width: 65px;
-	background-color: aqua;
-	border-color: #0400ff;
 }
 
 .ship-row-3 {
 	width: 98px;
-	background-color: aqua;
-	border-color: #0400ff;
 }
 
 .ship-row-4 {
 	width: 131px;
-	background-color: aqua;
-	border-color: #0400ff;
 }
 
 .ship-column-1 {
-	background-color: aqua;
-	border-color: #0400ff;
+	height: 32px;
 }
 
 .ship-column-2 {
 	height: 65px;
-	background-color: aqua;
-	border-color: #0400ff;
 }
 
 .ship-column-3 {
 	height: 98px;
-	background-color: aqua;
-	border-color: #0400ff;
 }
 
 .ship-column-4 {
 	height: 131px;
-	background-color: aqua;
-	border-color: #0400ff;
 }
 
 .app-actions {
@@ -138,13 +140,12 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding: auto;
 }
 
 .app-action {
-	font-family: 'Courier New';
 	width: 210px;
 	padding: 10px;
+	font-family: 'Courier New';
 }
 
 .shot {
@@ -158,7 +159,8 @@ body {
 }
 
 .shot-missed {
-	color: gray;
+	/* color: gray; */
+	color: "black";
 }
 
 .shot-wounded {
@@ -191,8 +193,8 @@ body {
 }
 
 .shot-killed {
-	margin: -2px;
-	border: 2px solid red;
+	margin: -3px;
+	border: 3px solid red;
 }
 
 .hidden {
